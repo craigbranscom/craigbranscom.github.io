@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="projects">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.projects.size > 0 -%}
+    <!-- <h2 class="project-list-heading">{{ page.list_title | default: "Projects" }}</h2> -->
+    <ul class="project-list">
+      {%- for project in site.projects -%}
+      <li>
+        <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="project-meta">{{ project.date | date: date_format }}</span> -->
+        <h3>
+          <a class="project-link" href="{{ project.url | relative_url }}">
+            {{ project.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ project.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>

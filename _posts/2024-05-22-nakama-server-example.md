@@ -3,7 +3,6 @@ layout: post
 title:  "Real-time Networked Godot Objects with Nakama Server"
 date:   2024-05-22 13:18:31 -0400
 categories: nakama godot multiplayer
-testvar: 5
 ---
 For this project I wanted to prototype a 2D multiplayer twin-stick shooter game similar to Enter the Gungeon. I chose to write the game client using Godot 4.2 and
 to use Nakama for the game server.
